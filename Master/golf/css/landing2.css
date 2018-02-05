@@ -1,0 +1,292 @@
+@import url(https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Passion+One:400,900,700);
+
+body, html {
+    height:100%;
+}
+
+.passion{
+    font-family: 'Passion One', sans-serif;
+    font-weight:400;
+}
+
+.passion-bold{
+    font-family: 'Passion One', sans-serif;
+    font-weight:700;
+    letter-spacing: 1px;
+}
+
+.passion-heavy{
+    font-family: 'Passion One', sans-serif;
+    font-weight:900;
+}
+
+.goth {
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+body {
+	background: url(http://images.waysideco.ca/putt4dough2016/landing.jpg) repeat right top;
+	border-top:solid #fbb040 6px;
+	border-bottom:solid #fbb040 6px;
+}
+
+.up-shadow {
+	-webkit-box-shadow: 0 -4px 10px 1px #000000;
+box-shadow: 0 -4px 10px 1px #000000;
+}
+
+.course {
+	background: url(http://images.waysideco.ca/putt4dough2016/landing.jpg) no-repeat center 80%;
+	 -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.course-two {
+	background: url(http://images.waysideco.ca/hyundaidrive/celebrate.jpg) no-repeat top center;
+	 -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.cockpit {
+	height:250px;
+	background: url(http://images.waysideco.ca/hyundaidrive/cockpit.jpg) no-repeat top center;
+	 -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+	.cockpit {
+		height:300px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+		.cockpit {
+		height:370px;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+		.cockpit {
+		height:430px;
+	}
+}
+
+
+.overlay {
+background-color: rgba(0, 0, 0, 0.5);
+padding-bottom:20px;
+}
+
+.blue-arg {
+	padding:20px 0;
+	background: url(http://images.waysideco.ca/putt4dough2016/green_argyle.png) repeat right top;
+	border-top:solid #fbb040 6px;
+	border-bottom:solid #fbb040 6px;
+}
+
+.green-arg {
+	padding:20px 0;
+	background: url(http://images.waysideco.ca/hyundaidrive/argyle_green.jpg) repeat right top;
+	border-top:solid #fbb040 6px;
+	border-bottom:solid #fbb040 6px;
+}
+
+.blue-grad {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00753f+0,006838+100 */
+background: rgb(0,117,63); /* Old browsers */
+background: -moz-linear-gradient(-45deg,  rgba(0,117,63,1) 0%, rgba(0,104,56,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(0,117,63,1) 0%,rgba(0,104,56,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(0,117,63,1) 0%,rgba(0,104,56,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00753f', endColorstr='#006838',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.green-grad-down {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#89c03e+0,77a737+100 */
+background: #89c03e; /* Old browsers */
+background: -moz-linear-gradient(top,  #89c03e 0%, #77a737 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#89c03e), color-stop(100%,#77a737)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #89c03e 0%,#77a737 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #89c03e 0%,#77a737 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #89c03e 0%,#77a737 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #89c03e 0%,#77a737 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#89c03e', endColorstr='#77a737',GradientType=0 ); /* IE6-9 */
+}
+
+.grass {
+	background: url(http://images.waysideco.ca/hyundaidrive/grass.jpg) repeat right top;
+}
+
+
+#log-col {
+	padding-top:0px;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	#log-col {
+		padding-top: 25px;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+	#log-col {
+		padding-top: 50px;
+	}
+}
+
+#formOne {
+	padding:0px 20px 20px 20px;
+	background-color: #0D1543;
+	border:#fbb040 solid 5px;
+	box-shadow: 5px 5px 15px #000;
+	 border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.tradeForm {
+	box-shadow: 5px 5px 15px #000;
+	 border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+#numberForm {
+	border: 1px dashed #000;
+	background-image:url(http://images.waysideco.ca/putt4dough2015/paper.jpg); 
+		box-shadow: 5px 5px 15px #000;
+	 border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+#entry-box {
+	padding-top:20px;
+	box-shadow: 5px 5px 15px #000;
+	border-radius: 25px;
+	background-image:url(http://images.waysideco.ca/putt4dough2015/paper.jpg); 
+	border: 1px dashed #000;
+}
+
+.vid-box {
+	width: 100%;
+	position: relative;
+	z-index: 0;
+}
+
+#wrapper {
+	width: 100%;
+	background-position: center center;
+}
+
+#putting {
+		background: transparent;
+	}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+	#putting {
+		background: transparent;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+		#putting {
+			width:100%;
+	background: url(http://images.waysideco.ca/hyundaidrive/putting.jpg) no-repeat center center;
+	background-size: 100%;
+	background-position: top center;	
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	#putting {
+	width:100%;
+	background: url(http://images.waysideco.ca/hyundaidrive/putting.jpg) no-repeat center center;
+	background-size: 100%;
+	background-position: top center;	
+	}
+}
+
+.game-bg {
+	width:100%;
+	background:url(http://images.waysideco.ca/hyundaidrive/game_bg.jpg) no-repeat top center ;
+	 -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.main_final {
+	padding:20px 0;
+	background: url(http://images.waysideco.ca/Putt4Dough2017/landing.jpg) repeat right top;
+	border-top:solid #fbb040 6px;
+}
+
+.trade {
+	background: transparent;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	.trade {
+	background:url(http://images.waysideco.ca/hyundaidrive/car_broken.jpg) no-repeat center center ;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.trade {
+	background:url(http://images.waysideco.ca/hyundaidrive/car_broken.jpg) no-repeat center center ;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+}
+
+
+
+.footer-text-right {
+	text-align: center;
+}
+.footer-text-left {
+	text-align: center;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	.footer-text-right{
+		text-align: right;
+	}
+	.footer-text-left {
+		text-align: left;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.footer-text-right {
+		text-align: right;
+	}
+	.footer-text-left {
+		text-align: left;
+	}
+}

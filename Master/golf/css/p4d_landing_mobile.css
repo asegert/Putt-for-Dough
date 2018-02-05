@@ -1,0 +1,63 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Passion+One:400,900,700);
+
+body, html {
+    height:100%;
+    background-color: #006838;
+}
+
+.passion{
+    font-family: 'Passion One', sans-serif;
+    font-weight:400;
+}
+
+.passion-bold{
+    font-family: 'Passion One', sans-serif;
+    font-weight:700;
+    letter-spacing: 1px;
+}
+
+.passion-heavy{
+    font-family: 'Passion One', sans-serif;
+    font-weight:900;
+}
+
+.goth {
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+#presents {
+    color:#BF0301;
+    font-size:16px;
+}
+
+#top-bar {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 30%;
+    background: #fff;
+    background: url(http://images.waysideco.ca/putt4dough2016/main_bg_mobile.jpg) no-repeat center top scroll; 
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    background-color:#006838;
+}
+
+#gold-band {
+    width:100%;
+    display:block;
+    position:relative;
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d6de23+0,d6de23+100&0.75+0,1+100 */
+background: -moz-linear-gradient(top,  rgba(214,222,35,0.75) 0%, rgba(214,222,35,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(214,222,35,0.75) 0%,rgba(214,222,35,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(214,222,35,0.75) 0%,rgba(214,222,35,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfd6de23', endColorstr='#d6de23',GradientType=0 ); /* IE6-9 */
+}
+
+#bottom-bar {  
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40%;   
+}

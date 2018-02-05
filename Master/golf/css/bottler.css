@@ -1,0 +1,65 @@
+/* CSS for bottle game
+-------------------------------------------------- */
+
+html {
+	background-color: #00;
+}
+
+#game-container {
+	display: block;
+	z-index:15;
+	overflow: hidden;
+	width:360px;
+	overflow: hidden;
+	background-color: #000;
+	outline: 5px solid #84C71F;
+	outline-offset: 0px;
+}
+@media (min-width: 768px) { 
+	#game-container {
+		width:500px;
+	}
+}
+
+#bottle-container {
+	z-index:5;
+	overflow: hidden;
+	display:block;
+	max-width:500px;
+	min-height:350px;
+	background: url(../images/bottle_layout.jpg); 
+	background-repeat: no-repeat;
+	cursor: crosshair;			 
+}
+
+#bottleBox {
+	width:500px;
+	height:120px;
+	display:block;
+	position: relative;
+	margin-top: 85px;
+}
+
+.bottle {
+	z-index: 1;
+	display:inline-block;
+	position:absolute;
+	float:right;
+	width:80px;
+	height:120px;
+	display:block;
+	margin-top: 0;
+	background: url(../images/bottle.png);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#uWin {
+	display:none;
+	opacity:0;
+}
+
+#prizeBtn {
+	display: none;
+	opacity: 0;
+}

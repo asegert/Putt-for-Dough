@@ -1,0 +1,89 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Montserrat:700);
+
+.source {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+.source-bold {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+}
+
+.mont {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+html, body {height:100%;width:100%; overflow-x:hidden;}
+
+
+.cityscape {
+  background: url(http://images.waysideco.ca/dos2016/cityscape_md.jpg) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#supeman-panel {
+    opacity:0;
+    height:60%;
+    width:auto;
+    position: absolute;
+    right:-80px;
+    top:0px;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+
+#batman-panel {
+     opacity:0;
+    height:60%;
+    width:auto;
+    position: absolute;
+    left:-80px;
+    top:0px;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -ms-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #supeman-panel {
+        height:100%;
+        width:auto;
+        position: absolute;
+        right:-1000px;
+        top:0px;
+    }
+
+    #batman-panel {
+        height:100%;
+        width:auto;
+        position: absolute;
+        left:-1000px;
+        top:0px;
+    }
+}
+
+
+
+#presents {
+    color:#BF0301;
+     font-size:16px;
+}
+
+#code-gen-headline {
+    color:#BF0301;
+}
+
+
+

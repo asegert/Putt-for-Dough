@@ -1,0 +1,191 @@
+body{
+    margin:0;
+    padding:0;
+    background:#000;
+}
+
+.fugaz {font-family: 'Fugaz One', san-serif;}
+
+.modal-backdrop {
+    background: url('../img/burst.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.modal-header, modal-body, modal-footer {background: transparent;}
+.modal.fade .modal-dialog {
+
+    -webkit-transform: translate(0, 0%);
+    -ms-transform: translate(0, 0%);
+    transform: translate(0, 0%);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    -moz-transition: -moz-transform 0.3s ease-out;
+    -o-transition: -o-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+}
+.modal-content {background-color:transparent;border:none;}
+div.modal-content{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+    height: 100%;
+}
+.modal-header{border-bottom:none;}
+.modal-footer{border-top:none;}
+
+body, html {
+  background-color: black;
+  height: 100%;
+  margin:0;
+  padding:0;
+}
+.modal-body {
+    padding:0px;
+}
+#emitter {
+
+  background-color: #transparent;
+  position: relative;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+.dot {
+
+  background-image: url('../images/sparkle.png'); 
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  z-index:5000;
+  pointer-events:none;
+   -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.burstBox {
+    padding-top:25%;
+    width:100%;min-height:90%;
+      -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .burstBox{padding-top: 20%}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .burstBox{padding-top: 15%}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .burstBox{padding-top: 10%}
+}
+
+
+
+.headline {
+    color:#ffffff;
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+#font-loader{position: absolute;top:-5000;left:-5000px;}
+
+#hundy {
+    margin-top: 2rem;
+    opacity:0;
+-moz-transform: scale(0.05);
+-webkit-transform: scale(0.05);
+-o-transform: scale(0.05);
+-ms-transform: scale(0.05);
+transform: scale(0.05);
+}
+
+#thousand {
+     margin-top: 2rem;
+    opacity:0;
+-moz-transform: scale(0.05);
+-webkit-transform: scale(0.05);
+-o-transform: scale(0.05);
+-ms-transform: scale(0.05);
+transform: scale(0.05);
+}
+
+#two-thousand {
+     margin-top: 2rem;
+    opacity:0;
+    -moz-transform: scale(0.05);
+-webkit-transform: scale(0.05);
+-o-transform: scale(0.05);
+-ms-transform: scale(0.05);
+transform: scale(0.05);
+}
+
+.next-btn {
+    opacity:0;
+    -moz-transform: scale(0.05);
+    -webkit-transform: scale(0.05);
+    -o-transform: scale(0.05);
+    -ms-transform: scale(0.05);
+    transform: scale(0.05);
+}
+
+.next-btn {
+    margin-top:2rem;
+    opacity:0;
+    -moz-transform: scale(0.05);
+    -webkit-transform: scale(0.05);
+    -o-transform: scale(0.05);
+    -ms-transform: scale(0.05);
+    transform: scale(0.05);
+}
+
+#congratsOne, #congratsTwo, #congratsThree {
+   font-size: 25px;
+   opacity:0;
+    -moz-transform: scale(0.05);
+    -webkit-transform: scale(0.05);
+    -o-transform: scale(0.05);
+    -ms-transform: scale(0.05);
+    transform: scale(0.05);  
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #congratsOne, #congratsTwo, #congratsThree {font-size: 30px;}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+   #congratsOne, #congratsTwo, #congratsThree {font-size: 40px;}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #congratsOne, #congratsTwo, #congratsThree {font-size: 50px;}
+}
+
+#discout-phrase-one, #discout-phrase-two, #discout-phrase-three {
+    color:#fff;
+    text-shadow: 0 0 4px #000;
+     text-shadow: 0 0 8px #000;
+     letter-spacing: 1px;
+}

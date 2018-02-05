@@ -1,0 +1,150 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Passion+One:400,900,700);
+
+body, html {
+    height:100%;
+    background-color:#006838;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    body, html {
+        height:100%;
+        background-color:#000;
+    }
+}
+
+.passion{
+    font-family: 'Passion One', sans-serif;
+    font-weight:400;
+}
+
+.passion-bold{
+    font-family: 'Passion One', sans-serif;
+    font-weight:700;
+    letter-spacing: 1px;
+}
+
+.passion-heavy{
+    font-family: 'Passion One', sans-serif;
+    font-weight:900;
+}
+
+.goth {
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.final-bg {
+  background: url(http://images.waysideco.ca/putt4dough2016/main_bg_mobile.jpg) no-repeat center top scroll; 
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+   background-color:#006838;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .final-bg {
+      background: url(http://images.waysideco.ca/putt4dough2016/page5_bg_lg.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-color:#000000;
+    }
+}
+
+.red-noise {
+    background: url(http://images.waysideco.ca/dos2016/red_noise.png) repeat; 
+}
+
+.blue-noise {
+    background: url(http://images.waysideco.ca/dos2016/blue_noise.png) repeat; 
+}
+
+.box {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 2px 15px 3px #080808;
+    box-shadow: 0 2px 15px 3px #080808;
+}
+
+.box-margin-top {
+    margin-top: 25%;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+     .box-margin-top {
+        margin-top: 0%;
+    }
+}
+
+.form-control {
+    background-color:#000;
+    border-color:#FF1D1B;
+    color:#fff;
+}
+
+.label-shadow {
+    text-shadow: 1px 1px 1px #CA3F3E;
+}
+
+
+.codebox-inner {
+    width:100%;
+    padding: 7px;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	border-radius: 0px 0px 5px 5px;
+	background-color: #FBB040;
+}
+
+.codes {
+	color:#000;
+}
+
+.share-btn {
+ 	opacity:0.75;
+ 	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: all 250ms ease-in-out;
+	-ms-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
+}
+
+.share-btn:hover {
+ 	opacity:1;
+}
+
+.intro {
+	opacity:0;
+	-moz-transform: scale(0.05);
+-webkit-transform: scale(0.05);
+-o-transform: scale(0.05);
+-ms-transform: scale(0.05);
+transform: scale(0.05);
+}
+
+.headline {
+     text-transform: uppercase;
+     margin-top:45%;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .headline {
+         margin-top:1%;
+    }
+}
+
+.finalPrize {
+    color:#fff;
+}
+
+#prize-amount {
+    font-size:48px;
+}
+
+.coupon-style {
+    border: 2px #FBB040 solid;
+}

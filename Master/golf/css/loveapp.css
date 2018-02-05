@@ -1,0 +1,383 @@
+@import url(https://fonts.googleapis.com/css?family=Francois+One|Alfa+Slab+One);
+@import url(https://fonts.googleapis.com/css?family=Passion+One);
+html {
+	overflow-x: hidden; 
+	height: 100%;
+	}
+
+body {
+	height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	display:block;
+	word-wrap:break-word;
+}
+
+.modal-open {
+  padding-right: 0 !important;
+}
+
+.golf {	
+		
+		min-width:100%;
+		height: auto;
+		position: relative;
+	 background: url(http://images.waysideco.ca/putt4dough2016/share-back.jpg)  center top fixed; 
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.test-drive{	
+		
+		min-width:100%;
+		height: auto;
+		position: relative;
+	
+	 background: url(http://images.waysideco.ca/putt4dough2016/trade-back.jpg) center top fixed; 
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.trade-page{	
+		
+		min-width:100%;
+		height: auto;
+		position: relative;
+	
+	 background: url(http://images.waysideco.ca/putt4dough2016/trademax.jpg) center top fixed; 
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+.facebook{	
+		
+		min-width:100%;
+		height: auto;
+		position: relative;
+		background-size:cover;
+	 background: url(http://images.waysideco.ca/putt4dough2016/page2-bg.jpg) center top fixed; 
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.intro {
+	opacity:0;
+	-moz-transform: scale(0.25);
+-webkit-transform: scale(0.25);
+-o-transform: scale(0.25);
+-ms-transform: scale(0.25);
+transform: scale(0.25);
+}
+
+.arena2 {	
+		  background: url(../images/test.jpg) no-repeat center top fixed; 
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		  margin-bottom: 0px;
+	}
+.resp-img {
+	width:100%;
+	height: auto;
+}
+
+.kelly{
+	font-family: 'Francois One', sans-serif;
+}
+
+.title{
+ font-family: 'Passion One', sans-serif;
+    font-weight:900;
+	letter-spacing:1px;
+}
+
+
+.btn-showroom {
+background-color:#470BA8;
+}
+
+
+.gold {
+	z-index: 1000000;
+          -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+              -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+                         box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c2912e', endColorstr='#c2912e',GradientType=1 ); /* IE6-9 */
+	background: #2D0868; /* Old browsers */
+border-top:solid 7px #D509C1;
+}
+
+
+
+.gold-two {
+	z-index: 1000000;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c2912e+0,fac926+27,eed688+54,fac926+79,c2912e+100 */
+	background: repeating-linear-gradient(
+  45deg,
+  #8EE138,
+  #9DE859 20px,
+  #5BA023 20px,
+  #9DE859 20px
+); /* Old browsers */
+	margin-top:10px;
+	padding-bottom:20px;
+	padding-top:20px;
+	
+	border-top:#2D0868 6px solid;
+	border-left:#2D0868 6px solid;
+	border-right:#2D0868 6px solid;
+	border-bottom:#2D0868 6px solid;
+	border-radius: 20px 20px 20px 20px;
+	box-shadow: 2px 2px 10px 4px  #000;
+
+}
+
+
+.black-grad {
+	opacity: 0;
+	position: absolute;
+	top:0px;
+	left:0px;
+	width: 100%;
+	min-height: 100%;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+0,1+60 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 60%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+.sign-up {
+	opacity:0.5;
+	width:100%;
+	height: auto;
+	position: relative;
+	top:-200px;
+	left:0px;
+	padding-bottom:10px;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c2912e+0,fac926+27,eed688+54,fac926+79,c2912e+100 */
+	background: #c2912e; /* Old browsers */
+	background: -moz-linear-gradient(left,  #c2912e 0%, #fac926 27%, #eed688 54%, #fac926 79%, #c2912e 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  #c2912e 0%,#fac926 27%,#eed688 54%,#fac926 79%,#c2912e 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  #c2912e 0%,#fac926 27%,#eed688 54%,#fac926 79%,#c2912e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c2912e', endColorstr='#c2912e',GradientType=1 ); /* IE6-9 */
+}
+
+.logoRow {
+	
+}
+
+
+
+
+
+#gen-wrapper{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	z-index:1;
+}
+.no-code{
+	display: block;
+	width: 100%;
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.25);
+	z-index: 0;
+	top:0px;
+	left:0px;
+}
+
+#no-code-tab {
+	cursor: pointer;
+	max-width:200px;background-color: rgba(255, 255, 255, 0.25);-webkit-border-radius: 0 0 5px 5px;
+border-radius: 0 0 5px 5px;padding-bottom:5px;padding-top:10px;padding-left:10px; padding-right:10px;
+}
+
+
+
+/* Memory Match game styles */
+div#memory_board {
+	height:auto;
+
+}
+div#memory_board > div {
+	background: url(http://images.waysideco.ca/boxingweek2015/cardback_lg.png);           
+	cursor:pointer;
+	background-size:cover;
+}   
+
+#scoreTime {
+	font-size: 45px;
+	line-height: 49px;
+	font-family: 'Alfa Slab One', serif;
+}
+#scoreTitle {
+	font-size: 25px;
+	line-height: 28px;
+	font-family: 'Alfa Slab One', serif;
+}
+.form_bg {
+	background-color: rgba(0, 0, 0, 0.90);
+	-webkit-border-radius: 25px 25px 0px 0px;
+	border-radius: 25px 25px 0px 0px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+
+}
+
+.form_bg3 {
+	background-color: rgba(0, 0, 0, 0.80);
+	border-radius: 20px 20px 20px 20px;
+	border-top: 2px solid #C38E1C;
+    border-left: 2px solid #FDC04D;
+    border-right: 2px solid #F5DF93;
+    border-bottom: 2px solid #E1B138;
+	-webkit-box-shadow: 0 0 10px 0 #FFB411;
+	box-shadow: 0 0 5px 0 #FFB411;
+
+	padding-bottom: 20px;
+	padding-top: 20px;
+
+}
+
+.form_bg4 {
+	background-color: rgba(0, 0, 0, 0.80);
+	border-radius: 20px 20px 20px 20px;
+	border-top:  3px solid #F8BE13;
+    border-left:  3px solid #F8BE13;
+    border-right:  3px solid #F8BE13;
+    border-bottom: 3px solid #F8BE13;
+
+margin-top:2%;
+	padding-bottom: 20px;
+	padding-top: 20px;
+
+}
+.form_bg_share {
+	background-color: rgba(13, 81, 18, 0.85);
+	border-radius: 20px 20px 20px 20px;
+
+border:4px solid #F8BE13;
+margin-top:5%;
+	padding-bottom: 20px;
+	padding-top: 20px;
+box-shadow: 0 0 15px #000
+}
+
+.error {
+	color:#D711E3;
+	font-size:14px;
+	font-weight:900;
+}
+
+.form_footer {
+	background-color: rgba(0, 0, 0, 0.90);
+	padding-bottom: 20px;
+		-webkit-border-radius: 0px 0px 25px 25px;
+	border-radius: 0px 0px 25px 25px;
+	margin-top:-10px;
+
+
+}
+.trans-grad {
+	opacity: 0;
+	position: absolute;
+	width:100%;
+	min-height: 100%;
+	max-height: 400%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.8+0,0.55+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.55) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.55) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.55) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#8c000000',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+.dark-grad {
+	opacity: 0;
+	position: absolute;
+	width:100%;
+	min-height: 100%;
+	max-height: 400%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.85+0,0.55+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.55) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.55) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0.85) 0%,rgba(0,0,0,0.55) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9000000', endColorstr='#8c000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+.trade_bg {
+	 background: url(http://images.waysideco.ca/boxingweek2015/throwdown.jpg) no-repeat center top fixed; 
+		  -webkit-background-size: cover;
+		  -moz-background-size: cover;
+		  -o-background-size: cover;
+		  background-size: cover;
+		  margin-bottom: 0px;
+	
+}
+
+.error-box {
+	padding-top:5px;color:#BE09E7; text-transform: uppercase;
+}
+
+.white-panel {
+	background-color: #f2f2f2;
+	width:100%;
+	position: relative;
+	display: block;
+}
+
+#sign-up-box {
+	opacity:0;
+	-moz-transform: scale(0.25);
+	-webkit-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	transform: scale(0.25);
+}
+
+#footer {
+	opacity:0;
+	-moz-transform: scale(0.25);
+	-webkit-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	transform: scale(0.25);
+}
+
+#slider {
+	opacity:0;
+}
+
+.cash {
+	opacity:0;
+	-moz-transform: scale(0.25);
+	-webkit-transform: scale(0.25);
+	-o-transform: scale(0.25);
+	-ms-transform: scale(0.25);
+	transform: scale(0.25);
+}
+
+#line {opacity:0;}
+#two-grand {
+	opacity:0;
+}

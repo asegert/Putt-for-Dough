@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Passion+One:400,900,700);
+
+body, html {
+    height:100%;
+}
+
+.passion{
+    font-family: 'Passion One', sans-serif;
+    font-weight:400;
+}
+
+.passion-bold{
+    font-family: 'Passion One', sans-serif;
+    font-weight:700;
+    letter-spacing: 1px;
+}
+
+.passion-heavy{
+    font-family: 'Passion One', sans-serif;
+    font-weight:900;
+}
+
+.goth {
+    font-family: 'Pathway Gothic One', sans-serif;
+    letter-spacing: 1px;
+}
+
+.green {
+      background: url(http://images.waysideco.ca/putt4dough2016/page1-bg.jpg) no-repeat center top scroll; 
+      -webkit-background-size: 100% auto;
+      -moz-background-size: 100% auto;
+      -o-background-size: 100% auto;
+      background-size: 100% auto;
+      background-color:#000;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .green {
+      background: url(http://images.waysideco.ca/putt4dough2016/page1-bg.jpg) no-repeat center center scroll; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-color:#000;
+    }
+}
+
+.red-noise {
+    border: 4px solid #F8BE13;
+        background-color: rgba(13, 81, 18, 0.85);
+}
+
+.box {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 2px 15px 3px #080808;
+    box-shadow: 0 2px 15px 3px #080808;
+}
+
+
+  .form-control {
+            background-color:#000;
+            border-color:#F6FF28;
+            color:#fff;
+        }
+
+.label-shadow {
+    text-shadow: 1px 1px 1px #CA3F3E;
+}
+
+#grand-prize {
+    font-size: 30px;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #grand-prize {
+        font-size: 55px;
+    }
+}

@@ -1,0 +1,218 @@
+
+.anton {
+	font-family: 'Anton', sans-serif;
+	letter-spacing: 2px;
+}
+
+.oswald {
+	font-family: 'Oswald', sans-serif;
+	letter-spacing: 1px;
+}
+
+/* Hide loading fonts */
+#font-loader{position: absolute;top:-5000;left:-5000px;font-family: font-family: 'Anton', sans-serif;color:#fff;}
+
+body{margin:0;padding:0;background:#ccc;}
+
+       .modal-backdrop {
+            background: url('../images/green_burst_sm.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+        .modal-backdrop {
+            background: url('../images/green_burst_lg.jpg') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    }
+        .modal-header, modal-body, modal-footer {background: transparent;}
+        .modal.fade .modal-dialog {
+            -webkit-transform: translate(0, 0%);
+            -ms-transform: translate(0, 0%);
+            transform: translate(0, 0%);
+            -webkit-transition: -webkit-transform 0.3s ease-out;
+            -moz-transition: -moz-transform 0.3s ease-out;
+            -o-transition: -o-transform 0.3s ease-out;
+            transition: transform 0.3s ease-out;
+        }
+        .modal-content {background-color:transparent;border:none;}
+        div.modal-content{
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            -o-box-shadow: none;
+            box-shadow: none;
+            height: 100%;
+        }
+        .modal-header{border-bottom:none;}
+        .modal-footer{border-top:none;}
+
+        body, html {
+          background-color: black;
+          height: 100%;
+          margin:0;
+          padding:0;
+        }
+        .modal-body {
+            padding:0px;
+        }
+
+        .burstBox {
+    padding-top:5%;
+    width:100%;min-height:90%;
+    }
+
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+        .burstBox{padding-top: 5%}
+    }
+
+    /* Medium devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+        .burstBox{padding-top: 10%}
+    }
+
+    /* Large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {
+        .burstBox{padding-top: 3%}
+    }
+
+    .modal-backdrop.in {
+        opacity: 1;
+    }
+    .modal-backdrop.out {
+        opacity: 0;
+    }
+
+    #hundy {
+    margin-top: 2rem;
+    opacity:0;
+    -moz-transform: scale(0.05);
+    -webkit-transform: scale(0.05);
+    -o-transform: scale(0.05);
+    -ms-transform: scale(0.05);
+    transform: scale(0.05);
+    }
+    #hundyCoupon {
+         margin-top: 2rem;
+    opacity:0;
+    -moz-transform: scale(0.05);
+    -webkit-transform: scale(0.05);
+    -o-transform: scale(0.05);
+    -ms-transform: scale(0.05);
+    transform: scale(0.05);
+    }
+
+    .next-btn {
+    margin-top:2rem;
+    opacity:0;
+    -moz-transform: scale(0.05);
+    -webkit-transform: scale(0.05);
+    -o-transform: scale(0.05);
+    -ms-transform: scale(0.05);
+    transform: scale(0.05);
+}
+
+       #congratsOne {
+           font-size: 25px;
+           opacity: 0;
+           text-shadow: 1px 1px 0 #ffffbc;
+       }
+       #congratsTwo {
+           font-size: 25px;
+           opacity: 0;
+           text-shadow: 1px 1px 0 #ffffbc;
+       }
+#congratsThree {
+   font-size: 25px;
+   opacity:0;
+    text-shadow: 1px 1px 0 #ffffbc; 
+}
+#congratsCoupon {
+   font-size: 25px;
+   opacity:0;
+    text-shadow: 1px 1px 0 #ffffbc; 
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #congratsOne {font-size: 30px;}
+    #congratsTwo {font-size: 30px;}
+    #congratsThree {font-size: 30px;}
+    #congratsCoupon {font-size: 30px;}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #congratsOne {font-size: 40px;}
+    #congratsTwo {font-size: 40px;}
+    #congratsThree {font-size: 40px;}
+    #congratsCoupon {font-size: 40px;}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #congratsOne {font-size: 50px;}
+    #congratsTwo {font-size: 50px;}
+    #congratsThree {font-size: 50px;}
+}
+
+#discout-phrase-one {
+    font-size: 16px;
+}
+
+#discout-phrase-two {
+    font-size: 16px;
+}
+
+#discout-phrase-three {
+    font-size: 16px;
+}
+#discout-phrase-coupon {
+    text-shadow: 1px 1px 1px #000;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+   #discout-phrase-one {
+        font-size: 24px;
+    }
+   #discout-phrase-two {
+        font-size: 24px;
+    }
+   #discout-phrase-three {
+        font-size: 24px;
+    }
+    #discout-phrase-coupon {
+        font-size: 24px;
+    }
+}
+
+canvas {
+     user-select: none;           
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  -webkit-touch-callout: none; /* iOS Safari */
+ 
+}
+body {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+
+#golf-instructions-vid {
+	-webkit-border-radius: 5px 5px 5px 5px;
+border-radius: 5px 5px 5px 5px;
+	-webkit-box-shadow: 0 0 15px 2px rgba(0,0,0,0.8);
+box-shadow: 0 0 15px 2px rgba(0,0,0,0.8);
+}

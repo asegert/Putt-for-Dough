@@ -1,0 +1,150 @@
+{
+    "Levels": [
+    {
+        "velocity": 0.997,
+        "powerMax": 100,
+        "hole": {
+                    "x": 400,
+                    "y": 250,
+                    "scalex": 0.3,
+                    "scaley": 0.3
+                },
+        "rowData": {
+                    "holeNum": 1,
+                    "par": 4,
+                    "strokes": "-",
+                    "pilesHit": "-",
+                    "penalties": "-",
+                    "score": "-"
+                },
+        "piles": {
+                    "minx": 100,
+                    "miny": 100,
+                    "maxx": 850,
+                    "maxy": 400,
+                    "coverx": 400,
+                    "covery": 250,
+                    "num": 40
+                },
+        "fence": {
+            "Left": {
+                "x": 40,
+                "y": 40,
+                "tex": "fence2"
+            },
+            "Right": {
+                "x": 870,
+                "y": 40,
+                "tex": "fence2"
+            },
+            "Back": {
+                "x": 40,
+                "y": 40,
+                "tex": "fence"
+            },
+            "LeftFront": {
+                "x": 0,
+                "y": 450,
+                "tex": "fence"
+            },
+            "RightFront": {
+                "x": 600,
+                "y": 450,
+                "tex": "fence"
+            }
+        },
+        "ponds":[
+            {
+                "x": 350,
+                "y": 100,
+                "flip": true
+            }
+        ],
+        "rocks":[
+            {
+                "x": 50,
+                "y": 350,
+                "flip": false
+            }
+        ],
+        "sands":[
+            {
+                "x": 800,
+                "y": 350,
+                "flip": true
+            }
+        ]
+    },
+    {
+        "velocity": 0.997,
+        "powerMax": 100,
+        "hole": {
+                    "x": 600,
+                    "y": 150,
+                    "scalex": 0.3,
+                    "scaley": 0.3
+                },
+        "rowData": {
+                    "holeNum": 2,
+                    "par": 8,
+                    "strokes": "-",
+                    "pilesHit": "-",
+                    "penalties": "-",
+                    "score": "-"
+                },
+        "piles": {
+                    "minx": 100,
+                    "miny": 100,
+                    "maxx": 850,
+                    "maxy": 400,
+                    "coverx": 600,
+                    "covery": 150,
+                    "num": 50
+                },
+        "fence": {
+            "Left": {
+                "x": 40,
+                "y": 40,
+                "tex": "fence2"
+            },
+            "Right": {
+                "x": 870,
+                "y": 40,
+                "tex": "fence2"
+            },
+            "Back": {
+                "x": 40,
+                "y": 40,
+                "tex": "fence"
+            },
+            "LeftFront": {
+                "x": 0,
+                "y": 450,
+                "tex": "fence"
+            },
+            "RightFront": {
+                "x": 600,
+                "y": 450,
+                "tex": "fence"
+            }
+        },
+        "ponds":[
+            
+        ],
+        "rocks":[
+            {
+                "x": 50,
+                "y": 350,
+                "flip": false
+            }
+        ],
+        "sands":[
+            {
+                "x": 800,
+                "y": 350,
+                "flip": true
+            }
+        ]
+    }
+    ]
+}

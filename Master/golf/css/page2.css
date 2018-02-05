@@ -1,0 +1,92 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Montserrat:700);
+
+.source {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+.source-bold {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+}
+
+.mont {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.city {
+  background: url(http://images.waysideco.ca/dos2016/darkCity_sm.jpg) no-repeat center top fixed; 
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  background-color:#000;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .city {
+      background: url(http://images.waysideco.ca/dos2016/darkCity_md.jpg) no-repeat center center; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+}
+
+.red-noise {
+    background: url(http://images.waysideco.ca/dos2016/red_noise.png) repeat; 
+}
+
+.blue-noise {
+    background: url(http://images.waysideco.ca/dos2016/blue_noise.png) repeat; 
+}
+
+.box {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 2px 15px 3px #080808;
+    box-shadow: 0 2px 15px 3px #080808;
+}
+
+
+.form-control {
+    background-color:#000;
+    border-color:#FF1D1B;
+    color:#fff;
+}
+
+.label-shadow {
+    text-shadow: 1px 1px 1px #CA3F3E;
+}
+
+#prize-amount {
+    font-size:20px;
+}
+#fb-share-btn{
+    font-size: 14px;
+}
+#share-text {
+    font-size: 14px;
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    #prize-amount {
+        font-size:30px;
+    }
+    #fb-share-btn{
+    font-size: 18px;
+    }
+    #share-text {
+    font-size: 26px;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+     #prize-amount {
+        font-size:45px;
+    }
+}
