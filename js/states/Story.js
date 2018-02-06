@@ -5,6 +5,9 @@ Golf.StoryState = {
     {
         //Main Background
         this.instruct = this.add.sprite(0, 0, 'main');
+        //Start the music
+        Golf.music = this.add.audio('background');
+        Golf.music.play('', 0, 1, true);
         //Indicates wheher or not to move to second section of the main screen
         this.unclicked = true;
         //Sets the ball texture in case no 'ball' is selected

@@ -119,7 +119,14 @@ Golf.GameState = {
             }
             else if (this.ball.body.velocity.y == 0 && this.ball.body.velocity.x == 0 && !this.inHole)
             {
-                //SSeet ball movement
+                Golf.music.volume = 0.5;
+                var sound = this.add.audio('putt');
+                sound.play();
+                sound.onStop.add(function()
+                {
+                    Golf.music.volume = 1;
+                }, this);
+                //Set ball movement
                 this.powerGo = false;
                 var angle = this.arrow.rotation - (Math.PI / 2);
                 this.ball.body.velocity.x = (this.power + 50) * Math.cos(angle);
@@ -243,6 +250,14 @@ Golf.GameState = {
                 //Give ball a 'bounce boost'
                 ball.body.velocity.x = (ball.body.velocity.x * (Golf.GameState.allData.Levels[Golf.GameState.level].velocity + 0.004));
                 ball.body.velocity.y = (ball.body.velocity.y * (Golf.GameState.allData.Levels[Golf.GameState.level].velocity + 0.004));
+                
+                Golf.music.volume = 0.5;
+                var sound = Golf.GameState.add.audio('rockHit');
+                sound.play();
+                sound.onStop.add(function()
+                {
+                    Golf.music.volume = 1;
+                }, this);
             });
             //Check if ball collided with a rock
             this.physics.arcade.collide(this.ball, this.rocks, function (ball)
@@ -250,6 +265,14 @@ Golf.GameState = {
                 //Give ball a 'bounce boost'
                 ball.body.velocity.x = (ball.body.velocity.x * (Golf.GameState.allData.Levels[Golf.GameState.level].velocity + 0.004));
                 ball.body.velocity.y = (ball.body.velocity.y * (Golf.GameState.allData.Levels[Golf.GameState.level].velocity + 0.004));
+                
+                Golf.music.volume = 0.5;
+                var sound = Golf.GameState.add.audio('rockHit');
+                sound.play();
+                sound.onStop.add(function()
+                {
+                    Golf.music.volume = 1;
+                }, this);
             });
             //Check if ball overlapped with the sand
             this.physics.arcade.overlap(this.ball, this.sands, function (ball)
@@ -257,6 +280,16 @@ Golf.GameState = {
                 //Slow ball dramatically
                 ball.body.velocity.x = (ball.body.velocity.x * (Golf.GameState.allData.Levels[Golf.GameState.level].velocity - 0.04));
                 ball.body.velocity.y = (ball.body.velocity.y * (Golf.GameState.allData.Levels[Golf.GameState.level].velocity - 0.04));
+                if(ball.body.velocity.x != 0 && ball.body.velocity.y != 0 && Golf.music.volume != 1)
+                {
+                    Golf.music.volume = 0.5;
+                    var sound = Golf.GameState.add.audio('sandTrap');
+                    sound.play();
+                    sound.onStop.add(function()
+                    {
+                        Golf.music.volume = 1;
+                    }, this);
+                }
             });
             //Check if ball overlapped with the pond
             this.physics.arcade.overlap(this.ball, this.pond, function (ball)
@@ -264,6 +297,13 @@ Golf.GameState = {
                 //Create a splash and reset ball
                 if (Golf.GameState.splashing == undefined)
                 {
+                    Golf.music.volume = 0.5;
+                    var sound = Golf.GameState.add.audio('splash');
+                    sound.play();
+                    sound.onStop.add(function()
+                    {
+                        Golf.music.volume = 1;
+                    }, this);
                     Golf.GameState.splashing = true;
                     Golf.GameState.sprite = Golf.GameState.add.sprite(ball.x - 50, ball.y - 50, 'splash');
                     var anim = Golf.GameState.sprite.animations.add('splash', [0, 1, 2, 3, 4, 5, 6, 7], 8, true);
@@ -277,7 +317,7 @@ Golf.GameState = {
                         {
                             fill: '#FF0000'
                         }
-                        console.log('splash');
+
                         Golf.GameState.strokes++;
                         var flashText = Golf.GameState.add.text(50, 50, 'Strokes: ' + Golf.GameState.strokes, style);
                         Golf.GameState.world.bringToTop(flashText);
@@ -793,6 +833,13 @@ Golf.GameState = {
     },
     proceed: function (e)
     {
+        Golf.music.volume = 0.5;
+        var sound = this.add.audio('applause');
+        sound.play();
+        sound.onStop.add(function()
+        {
+            Golf.music.volume = 1;
+        }, this);
         //Pause the input
         this.pauseInput = true;
         //Set the row's y based on which row it is
@@ -955,6 +1002,13 @@ Golf.GameState = {
     },
     endGame: function ()
     {
+        Golf.music.volume = 0.5;
+        var sound = this.add.audio('cheer');
+        sound.play();
+        sound.onStop.add(function()
+        {
+            Golf.music.volume = 1;
+        }, this);
         //Remove Elements
         this.gameOver = true;
         this.proceed(true);

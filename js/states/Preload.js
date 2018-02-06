@@ -89,13 +89,13 @@ Golf.PreloadState = {
 		                    ['powerupbot', 'assets/images/sprites/power-up-bot.png', 'assets/images/sprites/power-up-bot.xml'],
 	                    ],
             'audio': [
-		                    ['boing', ['assets/audio/boing.mp3', 'assets/audio/boing.ogg']],
-		                    ['boost', ['assets/audio/boost.mp3', 'assets/audio/boost.ogg']],
-                            ['splash', ['assets/audio/splash.mp3', 'assets/audio/splash.ogg']],
-		                    ['cheer', ['assets/audio/cheer.mp3', 'assets/audio/cheer.ogg']],
-		                    ['putt', ['assets/audio/putt.mp3', 'assets/audio/putt.ogg']],
-		                    ['cup', ['assets/audio/cup.mp3', 'assets/audio/cup.ogg']],
-		                    ['audio-click', ['assets/audio/audio-button.m4a', 'assets/audio/audio-button.mp3', 'assets/audio/audio-button.ogg']]
+		                    ['background', ['assets/audio/theStones.mp3', 'assets/audio/theStones.m4a', 'assets/audio/theStones.ogg']],
+		                    ['applause', ['assets/audio/applause.mp3', 'assets/audio/applause.m4a', 'assets/audio/applause.ogg']],
+                            ['sandTrap', ['assets/audio/sandTrap.mp3', 'assets/audio/sandTrap.m4a', 'assets/audio/sandTrap.ogg']],
+                            ['rockHit', ['assets/audio/rockHit.mp3', 'assets/audio/rockHit.mp3', 'assets/audio/rockHit.ogg']],
+                            ['splash', ['assets/audio/splash.mp3', 'assets/audio/splash.m4a', 'assets/audio/splash.ogg']],
+		                    ['cheer', ['assets/audio/cheer.mp3', 'assets/audio/cheer.m4a', 'assets/audio/cheer.ogg']],
+		                    ['putt', ['assets/audio/putt.mp3', 'assets/audio/putt.m4a', 'assets/audio/putt.ogg']]
 	                    ],
             'text': [
                             ['holeData', 'assets/data/holes.json'],
