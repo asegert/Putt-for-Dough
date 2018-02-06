@@ -13,41 +13,16 @@ Golf.PreloadState = {
     {
         var pack = {
             'image': [
-		                     ['rock-sm-bot', 'assets/images/stone_sm_bot.png'],
-		                     ['rock-sm', 'assets/images/stone_sm.png'],
-		                     ['bottomblank', 'assets/images/blank_level3_bumper.png'],
-		                     ['bumper', 'assets/images/bumper.png'],
 		                     ['rock-med', 'assets/images/stone_med.png'],
-		                     ['rock-medbot', 'assets/images/stone_med_bot.png'],
-		                     ['rock-side', 'assets/images/stone_side.png'],
-		                     ['rock-vert', 'assets/images/stone_vert.png'],
-                             ['grass-three', 'assets/images/grass-three.jpg'],
-                             ['reddot', 'assets/images/reddot.jpg'],
-                             ['rock-long', 'assets/images/rock-long.png'],
-                             ['grass-two', 'assets/images/grass-two.jpg'],
-                             ['pondbottom', 'assets/images/pondbottom.png'],
-                             ['pondtop', 'assets/images/pondtop.png'],
-                             ['rocksmall', 'assets/images/rocksmall.png'],
-                             ['rock', 'assets/images/rock.png'],
 		                     ['sand', 'assets/images/sand.png'],
 		                     ['hole', 'assets/images/hole.png'],
                              ['arrow', 'assets/images/arrow.png'],
 		                     ['ball', 'assets/images/ball.png'],
-                             ['grass2', 'assets/images/grass2.jpg'],
-		                     ['overlay', 'assets/images/overlay.png'],
-                             ['instructions', 'assets/images/instructions.png'],
                              ['ballBlack', 'assets/images/ballBlack.png'],
                              ['ballBlue', 'assets/images/ballBlue.png'],
                              ['ballRed', 'assets/images/ballRed.png'],
                              ['ballPurple', 'assets/images/ballPurple.png'],
-                             ['windmill', 'assets/images/windmill.png'],
-                             ['blade', 'assets/images/windmillBlade.png'],
                              ['bar', 'assets/images/bumper.png'],
-                             ['hole1v1', 'assets/images/hol1v1.png'],
-                             ['hole1v2', 'assets/images/hol1v2.png'],
-                             ['hole1v3', 'assets/images/hol1v3.png'],
-                             ['hole1', 'assets/images/hol1.png'],
-                             ['hole1Limit', 'assets/images/hol1Limits.png'],
                              ['pile', 'assets/images/cashPile.png'],
                              ['cash1', 'assets/images/cash1.png'],
                              ['cash2', 'assets/images/cash2.png'],
@@ -72,21 +47,10 @@ Golf.PreloadState = {
                              ['prize', 'assets/images/prizeButton.png']
 	                    ],
             'spritesheet': [
-                            ['skip', 'assets/images/skip-btn.png', 100, 30],
-		                    ['button-start', 'assets/images/button-start.png', 180, 180],
-		                    ['button-continue', 'assets/images/button-continue.png', 180, 180],
-		                    ['button-mainmenu', 'assets/images/button-mainmenu.png', 180, 180],
-		                    ['button-restart', 'assets/images/button-tryagain.png', 180, 180],
-		                    ['button-achievements', 'assets/images/button-achievements.png', 110, 110],
-		                    ['button-pause', 'assets/images/button-pause.png', 80, 80],
-		                    ['button-audio', 'assets/images/button-sound.png', 80, 80],
-		                    ['button-back', 'assets/images/button-back.png', 70, 70],
                             ['pileHint', 'assets/images/pileHint.png', 150, 140]
 	                       ],
             'atlasXML': [
-		                    ['splash', 'assets/images/sprites/splash.png', 'assets/images/sprites/splash.xml'],
-		                    ['poweruptop', 'assets/images/sprites/power-up-top.png', 'assets/images/sprites/power-up-top.xml'],
-		                    ['powerupbot', 'assets/images/sprites/power-up-bot.png', 'assets/images/sprites/power-up-bot.xml'],
+		                    ['splash', 'assets/images/sprites/splash.png', 'assets/images/sprites/splash.xml']
 	                    ],
             'audio': [
 		                    ['background', ['assets/audio/theStones.mp3', 'assets/audio/theStones.m4a', 'assets/audio/theStones.ogg']],
@@ -101,9 +65,6 @@ Golf.PreloadState = {
 	                    ],
             'text': [
                             ['holeData', 'assets/data/holes.json'],
-                        ],
-            'video': [
-                            ['windmillHole', 'assets/video/windmillHole.mp4', 'canplaythrough', true],
                         ]
         };
         for (var method in pack)
