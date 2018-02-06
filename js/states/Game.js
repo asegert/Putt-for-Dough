@@ -33,7 +33,7 @@ Golf.GameState = {
         this.ponds = this.add.group();
         this.rocks = this.add.group();
         this.sands = this.add.group();
-        //Hole num, par, strokes, piles hit, penalties, score
+        //Row Data contains: Hole num, par, strokes, piles hit, penalties, score
         this.rowData = [];
         for (var i = 0; i < this.allData.Levels.length; i++)
         {
@@ -119,7 +119,8 @@ Golf.GameState = {
             }
             else if (this.ball.body.velocity.y == 0 && this.ball.body.velocity.x == 0 && !this.inHole)
             {
-                Golf.music.volume = 0.5;
+                //Play putting sound effect, quiet the background while it plays
+                Golf.music.volume = 0.7;
                 var sound = this.add.audio('putt');
                 sound.play();
                 sound.onStop.add(function()
@@ -235,6 +236,14 @@ Golf.GameState = {
             //Check if ball collided with a pile
             this.physics.arcade.collide(this.ball, this.obstacles, function (ball, obstacle)
             {
+                //Play hole drop sound effect, quiet the background while it plays
+                Golf.music.volume = 0.7;
+                var sound = Golf.GameState.add.audio('pileHit');
+                sound.play();
+                sound.onStop.add(function()
+                {
+                    Golf.music.volume = 1;
+                }, this);
                 //Launch emitter and destroy the pile
                 obstacle.emitter.x = obstacle.x;
                 obstacle.emitter.y = obstacle.y;
@@ -251,6 +260,7 @@ Golf.GameState = {
                 ball.body.velocity.x = (ball.body.velocity.x * (Golf.GameState.allData.Levels[Golf.GameState.level].velocity + 0.004));
                 ball.body.velocity.y = (ball.body.velocity.y * (Golf.GameState.allData.Levels[Golf.GameState.level].velocity + 0.004));
                 
+                //Play hit sound effect, quiet the background while it plays
                 Golf.music.volume = 0.5;
                 var sound = Golf.GameState.add.audio('rockHit');
                 sound.play();
@@ -266,6 +276,7 @@ Golf.GameState = {
                 ball.body.velocity.x = (ball.body.velocity.x * (Golf.GameState.allData.Levels[Golf.GameState.level].velocity + 0.004));
                 ball.body.velocity.y = (ball.body.velocity.y * (Golf.GameState.allData.Levels[Golf.GameState.level].velocity + 0.004));
                 
+                //Play hit sound effect, quiet the background while it plays
                 Golf.music.volume = 0.5;
                 var sound = Golf.GameState.add.audio('rockHit');
                 sound.play();
@@ -282,6 +293,7 @@ Golf.GameState = {
                 ball.body.velocity.y = (ball.body.velocity.y * (Golf.GameState.allData.Levels[Golf.GameState.level].velocity - 0.04));
                 if(ball.body.velocity.x != 0 && ball.body.velocity.y != 0 && Golf.music.volume != 1)
                 {
+                    //Play sand trap sound effect, quiet the background while it plays
                     Golf.music.volume = 0.5;
                     var sound = Golf.GameState.add.audio('sandTrap');
                     sound.play();
@@ -297,6 +309,7 @@ Golf.GameState = {
                 //Create a splash and reset ball
                 if (Golf.GameState.splashing == undefined)
                 {
+                    //Play splashing sound effect, quiet the background while it plays
                     Golf.music.volume = 0.5;
                     var sound = Golf.GameState.add.audio('splash');
                     sound.play();
@@ -304,6 +317,7 @@ Golf.GameState = {
                     {
                         Golf.music.volume = 1;
                     }, this);
+                    //Creates the splashing animation
                     Golf.GameState.splashing = true;
                     Golf.GameState.sprite = Golf.GameState.add.sprite(ball.x - 50, ball.y - 50, 'splash');
                     var anim = Golf.GameState.sprite.animations.add('splash', [0, 1, 2, 3, 4, 5, 6, 7], 8, true);
@@ -318,6 +332,7 @@ Golf.GameState = {
                             fill: '#FF0000'
                         }
 
+                        //Creates the flashing text emphasizing the additional stroke added
                         Golf.GameState.strokes++;
                         var flashText = Golf.GameState.add.text(50, 50, 'Strokes: ' + Golf.GameState.strokes, style);
                         Golf.GameState.world.bringToTop(flashText);
@@ -340,6 +355,14 @@ Golf.GameState = {
             //Check if ball overlapped with the hole
             this.physics.arcade.overlap(this.ball, this.hole, function (ball, hole)
             {
+                //Play hole drop sound effect, quiet the background while it plays
+                Golf.music.volume = 0.7;
+                var sound = Golf.GameState.add.audio('hole');
+                sound.play();
+                sound.onStop.add(function()
+                {
+                    Golf.music.volume = 1;
+                }, this);
                 //If the tween is not already running, run it
                 if (!Golf.GameState.tweening)
                 {
@@ -833,7 +856,8 @@ Golf.GameState = {
     },
     proceed: function (e)
     {
-        Golf.music.volume = 0.5;
+        //Play applause sound effect, quiet the background while it plays
+        Golf.music.volume = 0.7;
         var sound = this.add.audio('applause');
         sound.play();
         sound.onStop.add(function()
@@ -1002,7 +1026,8 @@ Golf.GameState = {
     },
     endGame: function ()
     {
-        Golf.music.volume = 0.5;
+        //Play cheering sound effect, quiet the background while it plays
+        Golf.music.volume = 0.7;
         var sound = this.add.audio('cheer');
         sound.play();
         sound.onStop.add(function()
@@ -1051,7 +1076,7 @@ Golf.GameState = {
         //Timer b4 submission may replace with button
         this.time.events.add(Phaser.Timer.SECOND * 10, function ()
         {
-            document.getElementById('form1').submit; //guessing this works
+            document.getElementById('form1').submit;
         }, this);
 
         this.cardText = this.add.text(-35, -95, 'Scorecard', { fill: '#FFFFFF', font: '18px' });
@@ -1088,3 +1113,7 @@ Golf.GameState = {
         }, this);
     }
 };
+/*Copyright (C) Wayside Co. - All Rights Reserved
+* Unauthorized copying of this file, via any medium is strictly prohibited
+* Proprietary and confidential
+* Written and maintained by Wayside Co <info@waysideco.ca>, 2018*/

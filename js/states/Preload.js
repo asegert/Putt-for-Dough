@@ -93,9 +93,11 @@ Golf.PreloadState = {
 		                    ['applause', ['assets/audio/applause.mp3', 'assets/audio/applause.m4a', 'assets/audio/applause.ogg']],
                             ['sandTrap', ['assets/audio/sandTrap.mp3', 'assets/audio/sandTrap.m4a', 'assets/audio/sandTrap.ogg']],
                             ['rockHit', ['assets/audio/rockHit.mp3', 'assets/audio/rockHit.mp3', 'assets/audio/rockHit.ogg']],
+                            ['pileHit', ['assets/audio/pileHit.mp3', 'assets/audio/pileHit.m4a', 'assets/audio/pileHit.ogg']],
                             ['splash', ['assets/audio/splash.mp3', 'assets/audio/splash.m4a', 'assets/audio/splash.ogg']],
 		                    ['cheer', ['assets/audio/cheer.mp3', 'assets/audio/cheer.m4a', 'assets/audio/cheer.ogg']],
-		                    ['putt', ['assets/audio/putt.mp3', 'assets/audio/putt.m4a', 'assets/audio/putt.ogg']]
+		                    ['putt', ['assets/audio/putt.mp3', 'assets/audio/putt.m4a', 'assets/audio/putt.ogg']],
+                            ['hole', ['assets/audio/cup.mp3', 'assets/audio/cup.m4a', 'assets/audio/cup.ogg']]
 	                    ],
             'text': [
                             ['holeData', 'assets/data/holes.json'],
@@ -126,3 +128,7 @@ Golf.PreloadState = {
     //rock information stored as an array containing x and y coordinates and a flip value indicating whether or not the item needs to be rotated for each entry,
     //sand information stored as an array containing x and y coordinates and a flip value indicating whether or not the item needs to be rotated for each entry
 };
+/*Copyright (C) Wayside Co. - All Rights Reserved
+* Unauthorized copying of this file, via any medium is strictly prohibited
+* Proprietary and confidential
+* Written and maintained by Wayside Co <info@waysideco.ca>, 2018*/
