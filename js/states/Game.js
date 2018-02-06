@@ -130,8 +130,8 @@ Golf.GameState = {
                 //Set ball movement
                 this.powerGo = false;
                 var angle = this.arrow.rotation - (Math.PI / 2);
-                this.ball.body.velocity.x = (this.power + 50) * Math.cos(angle);
-                this.ball.body.velocity.y = (this.power + 50) * Math.sin(angle);
+                this.ball.body.velocity.x = (this.power + this.allData.Levels[this.level].powerOffset) * Math.cos(angle);
+                this.ball.body.velocity.y = (this.power + this.allData.Levels[this.level].powerOffset) * Math.sin(angle);
                 this.strokes++;
                 this.arrow.destroy();
                 this.lineSprite.alpha = 0;
@@ -172,6 +172,11 @@ Golf.GameState = {
                 Golf.GameState.penalties += penalty / 3;
             }
         });
+        if(this.allData.Levels[this.level].scoreCalculator == "piles")
+        {
+            this.pileHint.alpha = 0;
+            this.pileHint.input.enabled = false;
+        }
         this.guideHint = this.add.button(850, 500, 'guidelineHint', function ()
         {
             if (!this.pauseInput)
@@ -226,7 +231,7 @@ Golf.GameState = {
                 this.ball.body.velocity.y = (this.ball.body.velocity.y * this.allData.Levels[this.level].velocity);
             }
             //It is slow enough that it should be stopped
-            if ((this.ball.body.velocity.y < 15 && this.ball.body.velocity.y > -15) && (this.ball.body.velocity.x < 15 && this.ball.body.velocity.x > -15) && !this.inHole)
+            if ((this.ball.body.velocity.y < this.allData.Levels[this.level].stopThreshold && this.ball.body.velocity.y > -this.allData.Levels[this.level].stopThreshold) && (this.ball.body.velocity.x < this.allData.Levels[this.level].stopThreshold && this.ball.body.velocity.x > -this.allData.Levels[this.level].stopThreshold) && !this.inHole)
             {
                 this.ball.body.velocity.x = 0;
                 this.ball.body.velocity.y = 0;
@@ -410,6 +415,20 @@ Golf.GameState = {
             {
                 this.arrow.rotation = this.game.math.angleBetween(this.ball.body.x, this.ball.body.y, this.game.input.x, this.game.input.y) + Math.PI / 2;
             }
+            
+            if(this.ball.y < this.allData.Levels[this.level].fence.LeftFront.y && this.fences.length < 6)
+            {
+                var newFrontFence = this.add.sprite((this.allData.Levels[this.level].fence.RightFront.x - this.allData.Levels[this.level].fence.RightFront.y + 100), this.allData.Levels[this.level].fence.LeftFront.y, this.allData.Levels[this.level].fence.Back.tex);
+                newFrontFence.scale.setTo(1, 1);
+                this.game.physics.arcade.enable(newFrontFence);
+                newFrontFence.body.immovable = true;
+                newFrontFence.body.checkCollision.up = true;
+                newFrontFence.body.checkCollision.down = true;
+                newFrontFence.body.checkCollision.left = true;
+                newFrontFence.body.checkCollision.right = true;
+                this.world.bringToTop(newFrontFence);
+                this.fences.add(newFrontFence);
+            }
         }
     },
     showHole: function (hole)
@@ -435,9 +454,22 @@ Golf.GameState = {
         //If it is not the first hole reset buttons and other set up options
         else if (hole > 0 && hole < this.rowData.length)
         {
+            //Remove fence
+            this.fences.forEach(function(fence)
+            {
+                fence.destroy();
+            }, this);
+            this.fences.removeAll();
+            //And recreate it
+            this.createFence();
             //Reset hint buttons
             this.pileHint.frame = 0;
             this.pileHint.alpha = 1;
+            if(this.allData.Levels[this.level].scoreCalculator == "piles")
+            {
+                this.pileHint.alpha = 0;
+                this.pileHint.input.enabled = false;
+            }
 
             Golf.GameState.guide = false;
             this.guideHint.alpha = 1;
@@ -730,20 +762,36 @@ Golf.GameState = {
     },
     calculateScore: function ()
     {
-        //Add the current number of piles to the amount of piles carried over from previous holes (<5)
-        //Make the new carry over the mod five of the number and calculate the pile multiple of five 
-        //Subtract the multiple from the strokes to remove strokes based on piles hit
-        //Add penalties to the strokes as the score and reset values 
-        var o = this.piles + this.carryOver;
-        this.carryOver = o % 5;
-        var p = o - (o % 5);
-        var s = this.strokes - (p / 5);
-        s = s + this.penalties;
-        if (s < 0)
+        if(this.allData.Levels[this.level-1].scoreCalculator == "piles")
         {
-            s = 0;
+            //IF SCORE IS PILE BASED
+            this.score = this.score + this.piles;
+            
+            if(this.strokes <= this.allData.Levels[this.level-1].rowData.par)
+            {
+                this.score++;
+            }
+            this.score = this.score - this.penalties;
         }
-        this.score += s;
+        else if(this.allData.Levels[this.level-1].scoreCalculator == "stroke")
+        {
+            //IF SCORE IS STROKE BASED
+            //Add the current number of piles to the amount of piles carried over from previous holes (<5)
+            //Make the new carry over the mod five of the number and calculate the pile multiple of five 
+            //Subtract the multiple from the strokes to remove strokes based on piles hit
+            //Add penalties to the strokes as the score and reset values 
+            var o = this.piles + this.carryOver;
+            this.carryOver = o % 5;
+            var p = o - (o % 5);
+            var s = this.strokes - (p / 5);
+            s = s + this.penalties;
+            if (s < 0)
+            {
+                s = 0;
+            }
+            this.score += s;
+        }
+            
         this.strokes = 0;
         this.piles = 0;
         this.penalties = 0;
@@ -936,8 +984,15 @@ Golf.GameState = {
                 this.rowData[i][3] = this.piles;
                 this.rowData[i][4] = this.penalties;
                 this.calculateScore();
-                this.rowData[i][5] = this.score - this.rowData[i][1];
-                this.score = this.score - this.rowData[i][1];
+                if(this.allData.Levels[this.level-1].scoreCalculator == "piles")
+                {
+                    this.rowData[i][5] = this.score;
+                }
+                else
+                {
+                    this.rowData[i][5] = this.score - this.rowData[i][1];
+                    this.score = this.score - this.rowData[i][1];
+                }
                 filled = true;
             }
             //Display the row values
@@ -946,8 +1001,18 @@ Golf.GameState = {
             this.rowText3 = this.add.text(390, this.rowLeft.y, this.rowData[i][2], textStyle);
             this.rowText4 = this.add.text(520, this.rowLeft.y, this.rowData[i][3], textStyle);
             this.rowText5 = this.add.text(650, this.rowLeft.y, this.rowData[i][4], textStyle);
-            (this.rowData[i][5] > 0) ? textStyle = { font: '30px Arial', fill: '#FF0000'} : textStyle = { font: '30px Arial', fill: '#00FF00' };
-            (this.rowData[i][5] == "-" || this.rowData[i][5] == 0) ? textStyle = { font: '30px Arial', fill: '#000000'} : textStyle = textStyle;
+            
+            if(this.allData.Levels[this.level-1].scoreCalculator == "piles")
+            {
+                (this.rowData[i][5] > 0) ? textStyle = { font: '30px Arial', fill: '#00FF00'} : textStyle = { font: '30px Arial', fill:  '#FF0000' };
+                (this.rowData[i][5] == "-" || this.rowData[i][5] == 0) ? textStyle = { font: '30px Arial', fill: '#000000'} : textStyle = textStyle;
+            }
+            else
+            {
+                (this.rowData[i][5] > 0) ? textStyle = { font: '30px Arial', fill: '#FF0000'} : textStyle = { font: '30px Arial', fill: '#00FF00' };
+                (this.rowData[i][5] == "-" || this.rowData[i][5] == 0) ? textStyle = { font: '30px Arial', fill: '#000000'} : textStyle = textStyle;
+            }
+            
             this.rowText6 = this.add.text(770, this.rowLeft.y, this.rowData[i][5], textStyle);
             textStyle = { font: '30px Arial' };
             //Add the row components to the rows group

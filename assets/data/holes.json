@@ -2,12 +2,15 @@
     "Levels": [
     {
         "velocity": 0.997,
-        "powerMax": 100,
+        "powerMax": 200,
+        "stopThreshold": 45,
+        "powerOffset": 500,
+        "scoreCalculator": "piles",
         "hole": {
-                    "x": 400,
+                    "x": 390,
                     "y": 250,
-                    "scalex": 0.3,
-                    "scaley": 0.3
+                    "scalex": 0.5,
+                    "scaley": 0.5
                 },
         "rowData": {
                     "holeNum": 1,
@@ -54,35 +57,26 @@
             }
         },
         "ponds":[
-            {
-                "x": 350,
-                "y": 100,
-                "flip": true
-            }
+
         ],
         "rocks":[
-            {
-                "x": 50,
-                "y": 350,
-                "flip": false
-            }
+
         ],
         "sands":[
-            {
-                "x": 800,
-                "y": 350,
-                "flip": true
-            }
+
         ]
     },
     {
         "velocity": 0.997,
-        "powerMax": 100,
+        "powerMax": 200,
+        "stopThreshold": 45,
+        "powerOffset": 500,
+        "scoreCalculator": "piles",
         "hole": {
-                    "x": 600,
+                    "x": 590,
                     "y": 150,
-                    "scalex": 0.3,
-                    "scaley": 0.3
+                    "scalex": 0.5,
+                    "scaley": 0.5
                 },
         "rowData": {
                     "holeNum": 2,
